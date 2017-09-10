@@ -3159,7 +3159,9 @@ public abstract class PGL {
   public abstract void vertexAttrib2fv(int index, FloatBuffer values);
   public abstract void vertexAttrib3fv(int index, FloatBuffer values);
   public abstract void vertexAttrib4fv(int index, FloatBuffer values);
+  public abstract void vertexAttri4fv(int index, FloatBuffer values);
   public abstract void vertexAttribPointer(int index, int size, int type, boolean normalized, int stride, int offset);
+  public abstract void vertexAttribPointer(int index, int size, int type, boolean normalized, int stride, Buffer data);
   public abstract void enableVertexAttribArray(int index);
   public abstract void disableVertexAttribArray(int index);
 
@@ -3174,6 +3176,8 @@ public abstract class PGL {
     geomCount += count;
     drawElementsImpl(mode, count, type, offset);
   }
+
+  public abstract void drawElements(int mode, int count, int type, Buffer indices);
 
   public abstract void drawElementsImpl(int mode, int count, int type, int offset);
 

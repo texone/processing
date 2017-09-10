@@ -52,8 +52,9 @@
 	   debug="true"
 	   destdir="bin"
 	   classpath="apple.jar; 
-                      library/jogl-all.jar; 
-                      library/gluegen-rt.jar"
+                      library/lwjgl.jar; 
+                      library/lwjgl-opengl.jar;
+                      library/lwjgl-glfw.jar"
 	   nowarn="true">
       <!-- kinda gross, but if not using the JDT, this just ignored anyway -->
       <compilerclasspath path="${jdt.jar}; ${java.mode}/jdtCompilerAdapter.jar" />

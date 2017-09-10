@@ -709,8 +709,9 @@ public class PGraphicsOpenGL extends PGraphics {
 
   // Factory method
   protected PGL createPGL(PGraphicsOpenGL pg) {
-    return new PJOGL(pg);
+//     return new PJOGL(pg);
 //    return new PGLES(pg);
+    return new PLWJGL(pg);
   }
 
 
@@ -747,7 +748,8 @@ public class PGraphicsOpenGL extends PGraphics {
   @Override
   // Java only
   public PSurface createSurface() {  // ignore
-    return surface = new PSurfaceJOGL(this);
+//     return surface = new PSurfaceJOGL(this);
+    return new PSurfaceLWJGL(this);
   }
 
 
